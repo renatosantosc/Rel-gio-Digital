@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Relogio-Digital/static/css/main.1905faf5.css",
+    "main.js": "/Relogio-Digital/static/js/main.07fd51a1.js",
+    "index.html": "/Relogio-Digital/index.html",
+    "main.1905faf5.css.map": "/Relogio-Digital/static/css/main.1905faf5.css.map",
+    "main.07fd51a1.js.map": "/Relogio-Digital/static/js/main.07fd51a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1905faf5.css",
+    "static/js/main.07fd51a1.js"
+  ]
+}
