@@ -30,7 +30,7 @@ function App() {
       mn: timeNow.getMinutes(),
       sc: timeNow.getSeconds()
     })
-    time.hr === 12 ? setTimeUS(12) : setTimeUS(time.hr % 12) // transformando o horário BR em US
+    time.hr === 0 || time.hr === 12 ? setTimeUS(12) : setTimeUS(time.hr % 12) // transformando o horário BR em US
     time.hr >= 12 ? setAMPM('PM') : setAMPM('AM') // mudança da state de AM e PM
     
     setDayNow({
@@ -51,6 +51,7 @@ function App() {
   }
 
   setInterval(DateNow, 1000) // intervalo de 1 segundo para chamar a função
+  // console.log(time.hr)
 
   return (
       <div className={themes}>
@@ -78,12 +79,14 @@ function App() {
           <label>{dayNow.week}, {dayNow.day} de {dayNow.month} de {dayNow.year}</label> 
         </div>
         <div className='clock'>
+          
           {AMPM24 ? 
           <div className={seconds === true ? "falseSecond" : "time"}>{timeUS} <span>{AMPM}</span> </div>
         :
           <div className={seconds === true ? "falseSecond" : "time"}>{time.hr < 10 ? '0' + time.hr : time.hr} <span>Hs</span></div>
           }
           <div className={seconds === true ? "falseSecond" : "time"}>{time.mn < 10 ? '0' + time.mn : time.mn} <span>Mn</span></div>
+          
           {seconds === true ? ''
             :
             <div className="time">{time.sc < 10 ? '0' + time.sc : time.sc} <span>Sc</span> </div>
