@@ -79,17 +79,18 @@ body{
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: 1s;
+  transition: 0.5s;
   animation-name: clock;
-  animation-duration: 1s;
+  animation-duration: 1.2s;
 }
 .clock .falseSecond, .time{
   animation-name: time;
-  animation-duration: 1s;
+  animation-duration: 1.2s;
 }
+
 @keyframes time{
   0%{
-    left: -5%;
+    left: -100%;
   }
   100%{
     left: 0%;
@@ -97,7 +98,7 @@ body{
 }
 @keyframes clock{
   0%{
-    left: 5%;
+    left: 100%;
   }
   100%{
     left: 0%;
