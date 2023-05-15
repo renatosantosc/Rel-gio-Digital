@@ -54,7 +54,7 @@ function App() {
   // console.log(time.hr)
 
   return (
-      <div className={themes}>
+      <div className={themes}> 
         <div className='dark-light'>
           <button // botão de troca de background
             title='Tema'
@@ -72,6 +72,10 @@ function App() {
             <button onClick={()=>{seconds === false ? setSeconds(true) : setSeconds(false)}} title='Ocultar segundos'>
               Sec
             </button>
+        </div>
+
+        <div className='link-favicon'>
+          <a target="blank" href="https://icons8.com/icon/82767/rel%C3%B3gio">Relógio</a> icon by <a target="blank" href="https://icons8.com">Icons8</a>
         </div>
         </div>
         
