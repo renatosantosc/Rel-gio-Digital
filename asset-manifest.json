@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Relogio-Digital/static/css/main.09f63210.css",
-    "main.js": "/Relogio-Digital/static/js/main.f5d274a3.js",
+    "main.css": "/Relogio-Digital/static/css/main.de91f5c3.css",
+    "main.js": "/Relogio-Digital/static/js/main.8b61b377.js",
     "index.html": "/Relogio-Digital/index.html",
-    "main.09f63210.css.map": "/Relogio-Digital/static/css/main.09f63210.css.map",
-    "main.f5d274a3.js.map": "/Relogio-Digital/static/js/main.f5d274a3.js.map"
+    "main.de91f5c3.css.map": "/Relogio-Digital/static/css/main.de91f5c3.css.map",
+    "main.8b61b377.js.map": "/Relogio-Digital/static/js/main.8b61b377.js.map"
   },
   "entrypoints": [
-    "static/css/main.09f63210.css",
-    "static/js/main.f5d274a3.js"
+    "static/css/main.de91f5c3.css",
+    "static/js/main.8b61b377.js"
   ]
 }
