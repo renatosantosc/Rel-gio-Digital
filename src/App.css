@@ -24,11 +24,11 @@ body{
   background-color: white;
   transition: 0.5s;
 }
-.container-light .dark-light button{
+.container-light .dark-light button, .container-light .container-menu button{
   background-color: black;
   transition: 0.5s;
 }
-.container-light .dark-light button, .container-light .am-pm-24 button, .container-light .seconds button{
+.container-light .dark-light button, .container-light .am-pm-24 button, .container-light .seconds button, .container-light .container-menu button{
   color: white;
   border: 2px solid white;
 }
@@ -38,7 +38,6 @@ body{
   border-radius: 50%;
   position: absolute;
   top: 15px;
-  border: none;
   outline: none;
   transition: 0.5s;
   padding-top: 6px;
@@ -218,6 +217,7 @@ body{
   }
   .dateNow{
     font-size: 1.3rem;
+    margin-top: 0;
   }
 }
 @media(max-width: 480px){
