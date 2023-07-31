@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { MdOutlineLightMode } from 'react-icons/md'
 import { MdOutlineNightlight } from 'react-icons/md'
+import Toggle from './components/Toggle';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   const [timeUS, setTimeUS] = useState('') // State para a mudança de horário(BR/US)
   const [AMPM24, setAMPM24] = useState(false) // state para verificar se o botão da mudança de horário está ativo ou não
   const [seconds, setSeconds] = useState(false) // state para verificar se o botão que oculta os segundos está ativo ou não
+  const [toggle, setToggle] = useState(window.innerWidth)
   const [time, setTime] = useState({ // state para captura os valores de horários
     hr: '', // hora
     mn: '', // minuto
@@ -23,6 +25,7 @@ function App() {
   })
   const Week = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'] // array dos dias da semana
   const Months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'] // array dos mêses do ano
+  
   const DateNow = () =>{ // função onde será capturado od valores de horário e inserido nas states
     const timeNow = new Date()
     setTime({
@@ -39,6 +42,8 @@ function App() {
       month: Months[timeNow.getMonth()],
       year: timeNow.getFullYear()
     })
+
+    setToggle(window.innerWidth)
   }
 
   const theme = () =>{ // função para a troca de background
@@ -55,6 +60,8 @@ function App() {
 
   return (
       <div className={themes}> 
+        {toggle <= 768 ? <Toggle /> : 
+        
         <div className='dark-light'>
           <button // botão de troca de background
             title='Tema'
@@ -66,18 +73,19 @@ function App() {
             <button onClick={()=>{AMPM24 === false ? setAMPM24(true) : setAMPM24(false)}} title='Formato de horário'>
               {AMPM24 === true ? '24h' : '12h'}
             </button>
-        </div>
+          </div>
 
-        <div className='seconds'> {/* Botão de mudança para ocultar os segundos */}
-            <button onClick={()=>{seconds === false ? setSeconds(true) : setSeconds(false)}} title='Ocultar segundos'>
-              Sec
-            </button>
-        </div>
+          <div className='seconds'> {/* Botão de mudança para ocultar os segundos */}
+              <button onClick={()=>{seconds === false ? setSeconds(true) : setSeconds(false)}} title='Ocultar segundos'>
+                Sec
+              </button>
+          </div>
 
-        <div className='link-favicon'>
-          <a target="blank" href="https://icons8.com/icon/82767/rel%C3%B3gio">Relógio</a> icon by <a target="blank" href="https://icons8.com">Icons8</a>
+          <div className='link-favicon'>
+            <a target="blank" href="https://icons8.com/icon/82767/rel%C3%B3gio">Relógio</a> icon by <a target="blank" href="https://icons8.com">Icons8</a>
+          </div>
         </div>
-        </div>
+  }
         
         <div className='dateNow'>
           <label>{dayNow.week}, {dayNow.day} de {dayNow.month} de {dayNow.year}</label> 

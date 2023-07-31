@@ -1,0 +1,67 @@
+.container-toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #252525;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 10% auto 10%;
+    height: 100%;
+    width: 45%;
+    z-index: 1;
+}
+.container-toggle header{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.container-toggle header button{
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+    color: #252525;
+    border: 0;
+    border-radius: 25px;
+    font-weight: 600;
+}
+.container-toggle main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.container-toggle main button{
+    width: 94%;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fff;
+    color: #252525;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.container-toggle main button:hover{
+    background-color: #999797;
+    transition: all 0.3s;
+}
+.container-toggle .favicon-toggle, .container-toggle .favicon-toggle a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.container-toggle .favicon-toggle{
+    width: 100%;
+    text-align: center;
+}
+.container-toggle .favicon-toggle a{
+    color: #999797;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.container-toggle .favicon-toggle a:hover{
+    color: #fff;
+    transition: all 0.3s;
+}
