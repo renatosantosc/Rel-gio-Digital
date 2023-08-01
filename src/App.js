@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { MdOutlineLightMode } from 'react-icons/md'
-import { MdOutlineNightlight } from 'react-icons/md'
+import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md';
 import Toggle from './components/Toggle';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
   const [timeUS, setTimeUS] = useState('') // State para a mudança de horário(BR/US)
   const [AMPM24, setAMPM24] = useState(false) // state para verificar se o botão da mudança de horário está ativo ou não
   const [seconds, setSeconds] = useState(false) // state para verificar se o botão que oculta os segundos está ativo ou não
-  const [toggle, setToggle] = useState(window.innerWidth)
+  const [toggle, setToggle] = useState(window.innerWidth) // State para verificar a largura da página
   const [time, setTime] = useState({ // state para captura os valores de horários
     hr: '', // hora
     mn: '', // minuto
@@ -60,7 +59,13 @@ function App() {
 
   return (
       <div className={themes}> 
-        {toggle <= 768 ? <Toggle /> : 
+        {toggle <= 768 ? <Toggle 
+        setAMPM24={setAMPM24} 
+        AMPM24={AMPM24}
+        seconds={seconds}
+        setSeconds={setSeconds}
+        themes={themes}
+        setThemes={setThemes} /> : 
         
         <div className='dark-light'>
           <button // botão de troca de background
