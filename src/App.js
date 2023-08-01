@@ -59,7 +59,7 @@ function App() {
 
   return (
       <div className={themes}> 
-        {toggle <= 768 ? <Toggle 
+        {toggle <= 790 ? <Toggle 
         setAMPM24={setAMPM24} 
         AMPM24={AMPM24}
         seconds={seconds}
